@@ -24,17 +24,27 @@ body {
 }
 
 .menu {
-  display: none;
-  position: fixed;
-  width: 200px;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  width: 10rem;
   height: 100vh;
-  top: 0px;
-  left: 0px;
-  background: #333333;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .menu.show {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .menu-cnt {
