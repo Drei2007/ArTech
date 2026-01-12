@@ -121,7 +121,6 @@ body {
   padding: 14px 32px;
   font-size: 1.8rem;
   border-radius: 22px;
-  cursor: pointer;
 }
 
 @keyframes rgbMove {
