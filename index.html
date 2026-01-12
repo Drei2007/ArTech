@@ -2,46 +2,79 @@
 <html lang="en">
   <head>
     <title>ArTech</title>
-    <link rel="stylesheet" href="Artech.css">
+    <link rel="stylesheet" href="css/Artech.css">
   </head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 </style>
 <body>
-<header>
- <div class="header">
+  <header>
+<div class="header">
   <div class="header-logo">
-    ArTech
-  <button class="toggle-btn" id="button1" onclick="function1()">≡</button>
-  </div>
- </div>
+    <b>ArTech</b>
+  <button class="menuBtn" id="menuBtn">≡</button>
+  </div>  
 </header>
-
-<nav class="menu">
-  <ul>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Credits</a></li>
-    <li><a href="#">Members</a></li>
-  </ul>
-</nav>
 
 <div class="menu" id="menu1">
       <div class="menu-cnt">
-        <p> <button class="menu-cnt" id="button2" onclick="function2()"> about </button> </p>
-        <p> <button class="menu-cnt" id="button3" onclick="function3()"> credits </button> </p>
-        <p> <button class="menu-cnt" id="button4" onclick="function4()"> members </p>
+        <button class="menu-cnt" id="abt"> <b>About</b>
+        <button class="menu-cnt" id="crdts"> <b>Credits</b>
+        <button class="menu-cnt" id="mbrs"> <b>Members</b>
       </div>
  </div>
 
+
+<div class="container">
+  <button class="closeBtn" id="closeBtn">×</button>
+  <div class="content">
+    <p> penge nman po ng pedeng ilagay dito sa about section </p>
+  </div>
+</div>
+
+<section class="container2">
+  <button class="closeBtn" id="closeBtn">×</button>
+  <div class="content2">
+    <p> penge nman po ng pedeng ilagay dito sa credits section </p>
+  </div>
+</section>
+
+<section class="container3">
+  <button class="closeBtn" id="closeBtn">×</button>
+  <div class="content3">
+    <p> penge nman po ng pedeng ilagay dito sa members section </p>
+  </div>
+</section>
+
 <div class="intro">
     <h3> <b> "Empowering Creatives, Elevating Art" </b> </h3>
+    <section class="image1">
+      <img src="images/ArTech1.png"></img>
+    </section>
     <h2> Welcome to <b><i>ArTech</i></b>! </h2>
        <div class="intro-description">
           <p> your go-to hub for artists who feel stuck or underserved. Bridging the gap between raw talent and artistic mastery, offering expert guidance, practical tips, and community support.</p>
        </div>
  </div>
-<script src="ArTech.js"></script>
+ <section class="hero">
+   <button class="GetStr" id="GetStr"> <b>Get Started</b> <span class="arrow">→</span></button>
+ </section>
+
+<section class="data-container" id="menu2">
+  <div class="data-modal">
+    <p class="data-title"> <b>Please enter your name below</b> </p>
+    <input id="NameInput" type="text" placeholder="Enter your name" class="name-input">
+    <div class="button-container">
+     <button id="submitBtn"><b>Submit</b></button>
+     <button id="cancelBtn"><b>Cancel</b></button>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<script src="js/ArTech.js"></script>
 </body>
 </html> 
 
