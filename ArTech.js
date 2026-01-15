@@ -6,7 +6,7 @@ menuBtn.addEventListener("click", () => {
 
 document.querySelectorAll('.closeBtn').forEach(btn => {
   btn.addEventListener('click', () => {
-    btn.closest('.container, .container2, container3').classList.remove('show');
+    btn.closest('.container, .container2, .container3').classList.remove('show');
   });
 });
 
@@ -25,13 +25,30 @@ GetStr.addEventListener("click", () => {
   document.querySelector('.data-container').classList.add( 'show' ) ;
 });
 
-const submitBtn = document.getElementById("submitBtn"); submitBtn.addEventListener("click", () => {
+const form = document.querySelector('.data-modal');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   let nameValue = document.getElementById("NameInput").value;
   let users = JSON.parse(localStorage.getItem('users')) || [];
-  users.push(nameValue);
-  localStorage.setItem('users', JSON.stringify(users));
-  alert(`Hi, ${nameValue}`)
+  if (users.includes(nameValue)) {
+    window.location.href = 'main.html';
+  } else {
+    users.push(nameValue);
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('lastName', nameValue);
+    alert(`Hi, ${nameValue}`);
+    window.location.href = 'main.html';
+  }
 });
+
+window.onload = function() {
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+  let nameValue = localStorage.getItem('lastName');
+  if (users.includes(nameValue)) {
+    window.location.href = 'main.html';
+  }
+};
+
 const cancelBtn = document.getElementById("cancelBtn");
 const NameInput = document.getElementById("NameInput");
 const menu2 = document.getElementById("menu2");
@@ -39,4 +56,3 @@ const menu2 = document.getElementById("menu2");
 cancelBtn.addEventListener("click", () => {
   document.querySelector('.data-container').classList.remove( 'show' );
 });
-

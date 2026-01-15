@@ -6,15 +6,14 @@
   </head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-</style>
 <body>
-  <header>
+<header>
 <div class="header">
   <div class="header-logo">
     <b>ArTech</b>
   <button class="menuBtn" id="menuBtn">≡</button>
-  </div>  
+  </div> 
+</div>
 </header>
 
 <div class="menu" id="menu1">
@@ -29,14 +28,14 @@
 <div class="container">
   <button class="closeBtn" id="closeBtn">×</button>
   <div class="content">
-    <p> penge nman po ng pedeng ilagay dito sa about section </p>
+    <p> ArTech is an educational platform created to support self-taught and unsupervised artists who struggle to navigate the overwhelming amount of art resources available online. Many artists learn independently, relying on scattered tutorials and references, often leading to confusion, slow progress, or burnout. ArTech aims to solve this by providing structured, research-based guidance that simplifies the learning process.</p>
   </div>
 </div>
 
 <section class="container2">
   <button class="closeBtn" id="closeBtn">×</button>
   <div class="content2">
-    <p> penge nman po ng pedeng ilagay dito sa credits section </p>
+    <p> No copyright infringement intended. All credit goes to the rightful owners of pictures and other materials used in this video. This website is solely for research/educational purposes only </p>
   </div>
 </section>
 
@@ -62,18 +61,16 @@
  </section>
 
 <section class="data-container" id="menu2">
-  <div class="data-modal">
-    <p class="data-title"> <b>Please enter your name below</b> </p>
-    <input id="NameInput" type="text" placeholder="Enter your name" class="name-input">
+  <form class="data-modal">
+    <p class="data-title"> <b>Please enter your Full Name below</b> </p>
+    <input id="NameInput" type="text" placeholder="Enter your full name" class="name-input" required>
     <div class="button-container">
-     <button id="submitBtn"><b>Submit</b></button>
-     <button id="cancelBtn"><b>Cancel</b></button>
+     <button id="submitBtn" type="submit"><b>Submit</b></button>
+     <button id="cancelBtn" type="button"><b>Cancel</b></button>
     </div>
-  </div>
+  </form>
 </section>
 </div>
-
-
 <script src="ArTech.js"></script>
 </body>
 </html> 
