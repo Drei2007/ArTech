@@ -85,7 +85,17 @@
   <p><b>Ghosting</b> is a method in where we try to do the motion of drawing the lines with the pen lifted from the paper before actually completing the stroke. This is to maintain the accuracy of the lines and place it to where you want it to be. </p>
 </div>
 
-<video width="100%" height="auto"  src="ArTechL1.mp4" poster="ArTechT.png" controls controlsList="nodownload"></video>
+<div class="video-thumb" onclick="loadVideo()">
+  <img src="ArTechT.png" alt="Video thumbnail">
+  <span class="play-btn">▶</span>
+</div>
+
+<div id="video-container" style="display:none;">
+  <iframe
+    src="https://drive.google.com/file/d/1yo3LKOxpTkqfwBTIVcJq-RAKRvzVYpg0/preview"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <div class="end">
   <h2><b>End of Lesson 1</b></h2>
@@ -163,7 +173,17 @@
   
 </div>
 
-<video width="100%" height="auto"  src="ArTechL2.mp4" poster="ArTechT2.png" controls controlsList="nodownload"></video>
+<div class="video-thumb" onclick="loadVideo()">
+  <img src="ArTechT2.png" alt="Video thumbnail">
+  <span class="play-btn">▶</span>
+</div>
+
+<div id="video-container" style="display:none;">
+  <iframe
+    src="https://drive.google.com/file/d/14ZoXu-AvNGd4n4Pozi5iaMk9faSuRfrD/view?usp=drivesdk"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <div class="end">
   <h2><b>End of Lesson 2</b></h2>
@@ -267,11 +287,28 @@
   
 </div>
 
-<video width="100%" height="auto"  src="ArTechL3.mp4" poster="ArTechT3.png" controls controlsList="nodownload"></video>
+<div class="video-thumb" onclick="loadVideo()">
+  <img src="ArTechT3.png" alt="Video thumbnail">
+  <span class="play-btn">▶</span>
+</div>
+
+<div id="video-container" style="display:none;">
+  <iframe
+    src="https://drive.google.com/file/d/1EQEhYOb-FE_jQKIw4Zg8mBV5anSdkF3w/view?usp=drivesdk"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <div class="end1">
   <h2><b>A Job Well Done! you have completed all the lessons and is now ready to make more amazing arts in the future. Congratulations!!</b></h2>
 </div>
+
+<script>
+function loadVideo() {
+  document.querySelector('.video-thumb').style.display = 'none';
+  document.getElementById('video-container').style.display = 'block';
+}
+</script>
 
 <script src="main.js"></script>
 </body>

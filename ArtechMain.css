@@ -67,3 +67,25 @@ p {
   flex-direction: column;
   text-align: center;
 }
+
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+  max-width: 640px;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 64px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+}
