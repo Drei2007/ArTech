@@ -85,16 +85,12 @@
   <p><b>Ghosting</b> is a method in where we try to do the motion of drawing the lines with the pen lifted from the paper before actually completing the stroke. This is to maintain the accuracy of the lines and place it to where you want it to be. </p>
 </div>
 
-<div class="video-thumb" onclick="loadVideo()">
-  <img src="ArTechT.png" alt="Video thumbnail">
-  <span class="play-btn">▶</span>
-</div>
-
-<div id="video-container" style="display:none;">
-  <iframe
-    src="https://drive.google.com/file/d/1yo3LKOxpTkqfwBTIVcJq-RAKRvzVYpg0/preview"
-    allowfullscreen>
-  </iframe>
+<div class="video-thumb" onclick="loadVideo('https://drive.google.com/file/d/1yo3LKOxpTkqfwBTIVcJq-RAKRvzVYpg0/preview', this)"> 
+  <img src="ArTechT.png" alt="Video thumbnail"> 
+  <span class="play-btn">▶</span> 
+</div> 
+<div class="video-container" style="display:none;"> 
+  <iframe src="" allowfullscreen></iframe> 
 </div>
 
 <div class="end">
@@ -173,16 +169,12 @@
   
 </div>
 
-<div class="video-thumb" onclick="loadVideo()">
-  <img src="ArTechT2.png" alt="Video thumbnail">
-  <span class="play-btn">▶</span>
-</div>
-
-<div id="video-container" style="display:none;">
-  <iframe
-    src="https://drive.google.com/file/d/14ZoXu-AvNGd4n4Pozi5iaMk9faSuRfrD/view?usp=drivesdk"
-    allowfullscreen>
-  </iframe>
+<div class="video-thumb" onclick="loadVideo('https://drive.google.com/file/d/14ZoXu-AvNGd4n4Pozi5iaMk9faSuRfrD/view?usp=drivesdk', this)"> 
+  <img src="ArTechT2.png" alt="Video thumbnail"> 
+  <span class="play-btn">▶</span> 
+</div> 
+<div class="video-container" style="display:none;"> 
+  <iframe src="" allowfullscreen></iframe> 
 </div>
 
 <div class="end">
@@ -287,16 +279,12 @@
   
 </div>
 
-<div class="video-thumb" onclick="loadVideo()">
-  <img src="ArTechT3.png" alt="Video thumbnail">
-  <span class="play-btn">▶</span>
-</div>
-
-<div id="video-container" style="display:none;">
-  <iframe
-    src="https://drive.google.com/file/d/1EQEhYOb-FE_jQKIw4Zg8mBV5anSdkF3w/view?usp=drivesdk"
-    allowfullscreen>
-  </iframe>
+<div class="video-thumb" onclick="loadVideo('https://drive.google.com/file/d/1EQEhYOb-FE_jQKIw4Zg8mBV5anSdkF3w/view?usp=drivesdk', this)"> 
+  <img src="ArTechT3.png" alt="Video thumbnail"> 
+  <span class="play-btn">▶</span> 
+</div> 
+<div class="video-container" style="display:none;"> 
+  <iframe src="" allowfullscreen></iframe> 
 </div>
 
 <div class="end1">
@@ -304,9 +292,11 @@
 </div>
 
 <script>
-function loadVideo() {
-  document.querySelector('.video-thumb').style.display = 'none';
-  document.getElementById('video-container').style.display = 'block';
+function loadVideo(url, thumb) {
+  thumb.style.display = 'none';
+  let container = thumb.nextElementSibling;
+  container.style.display = 'block';
+  container.querySelector('iframe').src = url;
 }
 </script>
 
